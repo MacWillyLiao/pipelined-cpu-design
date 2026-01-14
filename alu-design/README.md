@@ -2,11 +2,11 @@
 Verilog implementation of an Arithmetic Logic Unit (ALU) supporting seven operations: AND, OR, ADD, SUB, SLT, SLL, and MULTU.
 
 ## 架構圖中的元件說明與設計
-- **ALU**：包含 32-bits AND, OR, ADD, SUB, SLT 等功能，使用 Gate-Level Modeling 與 Data Flow Modeling (Continuous Assignments)，從 Full Adder 做起，以 Ripple-Carry 的進位方式，連接 32 個 1-bit ALU Bit Slice，成為 32-bits ALU。其中不直接使用 '+' operator，亦不使用 Always Block 或 Procedure Assignment 來設計。本模組為組合邏輯（Combinational Logic）。  
+- **ALU**：包含 32-bits AND, OR, ADD, SUB, SLT 等功能，使用 Gate-Level Modeling 與 Data Flow Modeling (Continuous Assignments)，從 Full Adder 做起，以 Ripple-Carry 的進位方式，連接 32 個 1-bit ALU Bit Slice，成為 32-bits ALU。其中不直接使用 '+' operator，亦不使用 Always Block 或 Procedure Assignment 來設計。本模組為組合邏輯 (Combinational Logic)。  
 - **Multiplier**：為 32-bits 無號數乘法 (Sequential Multiplier)，採用 Second Version Sequential Multiplier 來設計。使用 Always Block 或 Procedure Assignment 來設計，不能使用迴圈形式的設計，意即 Multiplier 內不能有 for/while 等敘述。本模組為循序邏輯 (Sequential Logic)，因此須以 Clock 訊號同步。  
 - **Shifters**：32-bits Barrel Shifter，以完成邏輯左移運算。以 Data Flow Modeling (Continuous Assignments) 完成，其中不直接用 '>>' 或 '<<' operator，亦不使用 Always Block 或 Procedure Assignment 來設計。以 160 個 Mux 實現 Shifter。本模組為組合邏輯 (Combinational Logic)。  
 - **HiLo 暫存器**：為乘法器計算完後，儲存計算結果之 64-bits 暫存器。本模組為循序邏輯 (Sequential Logic)，因此須以 Clock 訊號同步。  
-- **Mux（多工器）**：須以 Data Flow Modeling 設計。本模組為組合邏輯（Combinational Logic）。  
+- **Mux（多工器）**：須以 Data Flow Modeling 設計。本模組為組合邏輯 (Combinational Logic)。  
 - **ALU Control**：根據輸入的 6-bits 控制訊號，決定該完成哪一種運算。控制訊號與功能對應如下：
     ```
     Signal : 6-bit Value(Decimal)
