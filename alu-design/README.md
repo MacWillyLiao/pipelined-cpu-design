@@ -10,7 +10,7 @@ Verilog implementation of an Arithmetic Logic Unit (ALU) supporting seven operat
 
 - **HiLo 暫存器**：為乘法器計算完後，儲存計算結果之 64-bits 暫存器。本模組為循序邏輯 (Sequential Logic)，因此須以 Clock 訊號同步。
 
-- **Mux（多工器）**：須以 Data Flow Modeling 設計。本模組為組合邏輯 (Combinational Logic)。
+- **Mux (多工器)**：須以 Data Flow Modeling 設計。本模組為組合邏輯 (Combinational Logic)。
 
 - **ALU Control**：根據輸入的 6-bits 控制訊號，決定該完成哪一種運算。控制訊號與功能對應如下：
     ```
@@ -29,7 +29,7 @@ Verilog implementation of an Arithmetic Logic Unit (ALU) supporting seven operat
 
 - **Testbench**：為所設計之模組之測試平台，須以讀檔的方式，讀入測試資料。以驗證所設計之模組，功能正確性。
 
-- **延遲（delay）**：前述 (1)(2)(3)(4)(5)(6)(7) 項設計，除了 (7) 項可包含延遲 (#constant)，以作為 Clock 週期與 Reset 之用外，其餘設計均無延遲 (#constant) 的敘述。
+- **延遲 (delay)**：前述 (1)(2)(3)(4)(5)(6)(7) 項設計，除了 (7) 項可包含延遲 (#constant)，以作為 Clock 週期與 Reset 之用外，其餘設計均無延遲 (#constant) 的敘述。
 
 - **額外規定**：本 Project 內所有 Verilog 程式，除了 Testbench 外，其餘部分皆不接受迴圈形式的設計；意即程式內不能有 for/while 等敘述。亦不能包含 Function/Task 敘述。亦不能包含 always @(*) 敘述。  
 
