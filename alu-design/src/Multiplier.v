@@ -1,5 +1,6 @@
 `timescale 1ns/1ns
 module Multiplier (clk, dataA, dataB, Signal, dataOut, reset, counter);
+	
 	input clk;
 	input reset;
 	input [31:0] dataA;  // multiplicand
