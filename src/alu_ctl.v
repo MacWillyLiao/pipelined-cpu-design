@@ -20,15 +20,15 @@ module alu_ctl (ALUOp, Funct, ALUOperation);
             2'b00: ALUOperation = F_add;
             2'b01: ALUOperation = F_sub;
             2'b10: case (Funct) 
-                        F_add   : ALUOperation = F_add;
-                        F_sub   : ALUOperation = F_sub;
-                        F_and   : ALUOperation = F_and;
-                        F_or    : ALUOperation = F_or;
-                        F_slt   : ALUOperation = F_slt;
-                        F_multu : ALUOperation = F_multu;
-                        F_mfhi  : ALUOperation = F_mfhi;
-                        F_mflo  : ALUOperation = F_mflo;
-                        default ALUOperation = 3'bxxx;  
+                        F_add  : ALUOperation = F_add;
+                        F_sub  : ALUOperation = F_sub;
+                        F_and  : ALUOperation = F_and;
+                        F_or   : ALUOperation = F_or;
+                        F_slt  : ALUOperation = F_slt;
+                        F_multu: ALUOperation = F_multu;
+                        F_mfhi : ALUOperation = F_mfhi;
+                        F_mflo : ALUOperation = F_mflo;
+                        default: ALUOperation = 3'bxxx;  
                     endcase
             2'b11: ALUOperation = F_and;
             default ALUOperation = 3'bxxx;  // nop
