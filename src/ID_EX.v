@@ -1,4 +1,4 @@
-module  ID_EX (reset, clk, RD1_in, RD1_out, RD2_in, RD2_out, extend_immed_in, extend_immed_out,
+module ID_EX (reset, clk, RD1_in, RD1_out, RD2_in, RD2_out, extend_immed_in, extend_immed_out,
                funct_in, funct_out, rt_in, rt_out, rd_in, rd_out, RegDst_in, RegDst_out, 
                ALUSrc_in, ALUSrc_out, MemtoReg_in, MemtoReg_out, RegWrite_in, RegWrite_out,
                MemRead_in, MemRead_out, MemWrite_in, MemWrite_out, ALUOp_in, ALUOp_out) ;
