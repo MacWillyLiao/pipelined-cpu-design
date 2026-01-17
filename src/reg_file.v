@@ -1,4 +1,5 @@
 module reg_file (clk, RegWrite, RN1, RN2, WN, WD, RD1, RD2);
+	
 	input clk;
 	input RegWrite;
 	input [4:0] RN1, RN2, WN;
