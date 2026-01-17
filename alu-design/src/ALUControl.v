@@ -26,28 +26,25 @@ module ALUControl(clk, Signal, SignaltoALU, SignaltoSHT, SignaltoMUL, SignaltoMU
     always @(Signal) begin
         if ( Signal == MULTU )
         begin
-          counter = 0 ;
+            counter = 0 ;
         end
     end
     
-    always @( posedge clk )
-    begin
-      temp = Signal ;
-      if ( Signal == MULTU )
-      begin
-        counter = counter + 1 ;
-        if ( counter == 32 )
-        begin
-          temp = 6'b111111 ; // Open HiLo reg for MUL
-          counter = 0 ;
-        end
-      end
+    always @(posedge clk) begin
+      temp = Signal;
+      if (Signal == MULTU) begin
+          counter = counter + 1;
+          if (counter == 32) begin
+              temp = 6'b111111 ;  // Open HiLo reg for MUL
+              counter = 0 ;
+          end
+       end
     end
     
-    assign SignaltoALU = temp ;
-    assign SignaltoSHT = temp ;
-    assign SignaltoMUL = temp ;
-    assign SignaltoMUX = temp ;
-    assign MUL_counter = counter ;
+    assign SignaltoALU = temp;
+    assign SignaltoSHT = temp;
+    assign SignaltoMUL = temp;
+    assign SignaltoMUX = temp;
+    assign MUL_counter = counter;
 
 endmodule
