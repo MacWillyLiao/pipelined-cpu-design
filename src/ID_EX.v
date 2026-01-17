@@ -1,7 +1,7 @@
 module ID_EX (reset, clk, RD1_in, RD1_out, RD2_in, RD2_out, extend_immed_in, extend_immed_out,
-               funct_in, funct_out, rt_in, rt_out, rd_in, rd_out, RegDst_in, RegDst_out, 
-               ALUSrc_in, ALUSrc_out, MemtoReg_in, MemtoReg_out, RegWrite_in, RegWrite_out,
-               MemRead_in, MemRead_out, MemWrite_in, MemWrite_out, ALUOp_in, ALUOp_out) ;
+              funct_in, funct_out, rt_in, rt_out, rd_in, rd_out, RegDst_in, RegDst_out, 
+              ALUSrc_in, ALUSrc_out, MemtoReg_in, MemtoReg_out, RegWrite_in, RegWrite_out,
+              MemRead_in, MemRead_out, MemWrite_in, MemWrite_out, ALUOp_in, ALUOp_out) ;
 
 input clk, reset, RegDst_in, ALUSrc_in, MemtoReg_in, RegWrite_in, MemRead_in, MemWrite_in ;
 input [31:0] RD1_in, RD2_in, extend_immed_in ;
