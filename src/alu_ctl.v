@@ -1,4 +1,5 @@
 module alu_ctl (ALUOp, Funct, ALUOperation);
+    
     input [1:0] ALUOp;
     input [5:0] Funct;
     output [5:0] ALUOperation;
