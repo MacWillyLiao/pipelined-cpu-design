@@ -16,9 +16,9 @@ module alu_ctl (ALUOp, Funct, ALUOperation);
 
     always @(ALUOp or Funct) begin
         case (ALUOp) 
-            2'b00 : ALUOperation = F_add;
-            2'b01 : ALUOperation = F_sub;
-            2'b10 : case (Funct) 
+            2'b00: ALUOperation = F_add;
+            2'b01: ALUOperation = F_sub;
+            2'b10: case (Funct) 
                         F_add   : ALUOperation = F_add;
                         F_sub   : ALUOperation = F_sub;
                         F_and   : ALUOperation = F_and;
@@ -29,7 +29,7 @@ module alu_ctl (ALUOp, Funct, ALUOperation);
                         F_mflo  : ALUOperation = F_mflo;
                         default ALUOperation = 3'bxxx;  
                     endcase
-            2'b11 : ALUOperation = F_and;
+            2'b11: ALUOperation = F_and;
             default ALUOperation = 3'bxxx;  // nop
         endcase
     end
