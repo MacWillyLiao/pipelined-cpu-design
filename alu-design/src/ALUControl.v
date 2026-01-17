@@ -1,4 +1,4 @@
-`timescale 1ns/ 1ns
+`timescale 1ns/1ns
 module ALUControl(clk, Signal, SignaltoALU, SignaltoSHT, SignaltoMUL, SignaltoMUX, MUL_counter);
   
     input clk;
