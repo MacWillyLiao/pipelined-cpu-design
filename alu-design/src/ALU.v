@@ -1,4 +1,4 @@
-`timescale 1ns/ 1ns
+`timescale 1ns/1ns
 module ALU (dataA, dataB, Signal, dataOut);
 
     input [31:0] dataA;
