@@ -34,4 +34,5 @@ always @(posedge clk) begin
         MemWrite_out <= MemWrite_in;
     end
 end
+
 endmodule
