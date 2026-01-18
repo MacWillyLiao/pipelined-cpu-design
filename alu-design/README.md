@@ -31,7 +31,7 @@ Verilog implementation of an Arithmetic Logic Unit (ALU) supporting seven operat
 
 - **延遲 (delay)**：前述 7 項設計，除了 Testbench 項包含延遲 (#constant)，以作為 Clock 週期與 Reset 之用，其餘設計均無延遲 (#constant) 的敘述。
 
-- **額外規定**：本 Project 內所有 Verilog 程式，除了 Testbench 外，其餘部分皆無迴圈形式的設計；意即程式內沒有 for/while 等敘述。亦無 Function/Task 敘述、無 always @(*) 敘述。  
+- **額外規定**：本 `alu-design` 內所有 Verilog 程式，除了 Testbench 外，其餘部分皆無迴圈形式的設計；意即程式內沒有 for/while 等敘述。亦無 Function/Task 敘述、無 always @(*) 敘述。  
 
 **架構圖**：
 ![Figure 1](datapath.png) 
