@@ -1,7 +1,7 @@
 # alu-design
 Verilog implementation of an Arithmetic Logic Unit (ALU) supporting seven operations: AND, OR, ADD, SUB, SLT, SLL, and MULTU.
 
-## 架構圖
+## Datapath 架構圖
 ![Figure 1](datapath.png) 
 
 ## 架構圖中的元件說明與設計
