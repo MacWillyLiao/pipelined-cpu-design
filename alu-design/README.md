@@ -37,4 +37,4 @@ Verilog implementation of an Arithmetic Logic Unit (ALU) supporting seven operat
 - **額外規定**：本 `alu-design` 內所有 Verilog 程式，除了 Testbench 外，其餘部分皆無迴圈形式的設計；意即程式內沒有 for/while 等敘述。亦無 Function/Task 敘述、無 always @(*) 敘述。  
 
 ## 結果
-詳細書面報告在 [report.pdf](report.pdf) 中
+詳細書面報告在 [report.pdf](report.pdf) 中。
