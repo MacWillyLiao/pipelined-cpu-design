@@ -1,15 +1,16 @@
 `timescale 1ns/1ns
-module Shifter(dataA, dataB, Signal, dataOut);
-input [31:0] dataA;
-input [31:0] dataB;  // s4~s0
-input [5:0] Signal;
-output [31:0] dataOut;
-
-wire [31:0] temp;
-wire [31:0] temp1;
-wire [31:0] temp2;
-wire [31:0] temp3;
-wire [31:0] temp4;
+module Shifter (dataA, dataB, Signal, dataOut);
+	
+	input [31:0] dataA;
+	input [31:0] dataB;  // s4~s0
+	input [5:0] Signal;
+	output [31:0] dataOut;
+	
+	wire [31:0] temp;
+	wire [31:0] temp1;
+	wire [31:0] temp2;
+	wire [31:0] temp3;
+	wire [31:0] temp4;
 
 	// s0
 	assign temp[0] = dataB[0] ? 1'b0 : dataA[0] ;
@@ -177,6 +178,6 @@ wire [31:0] temp4;
 	assign temp4[30] = dataB[4] ? temp3[14] : temp3[30] ;
 	assign temp4[31] = dataB[4] ? temp3[15] : temp3[31] ;
 		  
-assign dataOut = temp4;
+	assign dataOut = temp4;
 
 endmodule
