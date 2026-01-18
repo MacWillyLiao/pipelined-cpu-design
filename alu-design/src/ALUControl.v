@@ -1,5 +1,5 @@
 `timescale 1ns/1ns
-module ALUControl(clk, Signal, SignaltoALU, SignaltoSHT, SignaltoMUL, SignaltoMUX, MUL_counter);
+module ALUControl (clk, Signal, SignaltoALU, SignaltoSHT, SignaltoMUL, SignaltoMUX, MUL_counter);
   
     input clk;
     input [5:0] Signal;
