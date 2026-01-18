@@ -2,11 +2,11 @@
 Verilog HDL project implementing a pipelined MIPS-Lite CPU using ModelSim
 
 ## 實現以下 16 道 MIPS 指令
-a) Integer Arithmetic: add, sub, and, or, sll, slt, andi  
-b) Integer Memory Access: lw, sw  
-c) Integer Branch: beq, j, jr  
-d) Integer Multiply/Divide: multu  
-e) Other Instructions: mfhi, mflo, nop  
+a) Integer Arithmetic: `add`, `sub`, `and`, `or`, `sll`, `slt`, `andi`  
+b) Integer Memory Access: `lw`, `sw`  
+c) Integer Branch: `beq`, `j`, `jr`  
+d) Integer Multiply/Divide: `multu`  
+e) Other Instructions: `mfhi`, `mflo`, `nop`   
 
 ## 設計
 - **ALU**：使用 [`alu-design/`](alu-design/) 中所設計之 ALU 完成 add, sub, and, or, sll, slt, andi 指令。詳情請見 alu-design 資料夾中的 [README.md](alu-design/README.md)。
