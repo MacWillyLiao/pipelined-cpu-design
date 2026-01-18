@@ -27,7 +27,7 @@ Verilog implementation of an Arithmetic Logic Unit (ALU) supporting seven operat
     ```
     本模組為循序邏輯 (Sequential Logic)，Clock 訊號同步。
 
-- **Testbench (tb)**：為所設計之模組之測試平台，以讀檔的方式，讀入測試資料。以驗證所設計之模組，功能正確性。
+- **Testbench (tb)**：為所設計之模組之測試平台，以讀檔的方式，讀入測試資料。以驗證所設計之模組功能正確性。
 
 - **延遲 (delay)**：前述 7 項設計，除了 Testbench 項包含延遲 (#constant)，以作為 Clock 週期與 Reset 之用，其餘設計均無延遲 (#constant) 的敘述。
 
