@@ -14,7 +14,7 @@ Verilog implementation of an Arithmetic Logic Unit (ALU) supporting seven operat
 
 - **ALU Control**：根據輸入的 6-bits 控制訊號，決定該完成哪一種運算。控制訊號與功能對應如下：
     ```
-    Signal : 6-bit Value(Decimal)
+    Signal : 6-bits Value(Decimal)
     ---------------------
     AND : 36
     OR : 37
