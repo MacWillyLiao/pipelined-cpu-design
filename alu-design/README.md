@@ -1,6 +1,9 @@
 # alu-design
 Verilog implementation of an Arithmetic Logic Unit (ALU) supporting seven operations: AND, OR, ADD, SUB, SLT, SLL, and MULTU.
 
+**架構圖**：
+![Figure 1](datapath.png) 
+
 ## 架構圖中的元件說明與設計
 - **ALU**：包含 32-bits AND, OR, ADD, SUB, SLT 等功能，使用 Gate-Level Modeling 與 Data Flow Modeling (Continuous Assignments)，從 Full Adder 做起，以 Ripple-Carry 的進位方式，連接 32 個 1-bit ALU Bit Slice，成為 32-bits ALU。其中不直接使用 '+' operator，亦不使用 Always Block 或 Procedure Assignment 來設計。本模組為組合邏輯 (Combinational Logic)。
  
@@ -32,9 +35,6 @@ Verilog implementation of an Arithmetic Logic Unit (ALU) supporting seven operat
 - **延遲 (delay)**：前述 7 項設計，除了 Testbench 項包含延遲 (#constant)，以作為 Clock 週期與 Reset 之用，其餘設計均無延遲 (#constant) 的敘述。
 
 - **額外規定**：本 `alu-design` 內所有 Verilog 程式，除了 Testbench 外，其餘部分皆無迴圈形式的設計；意即程式內沒有 for/while 等敘述。亦無 Function/Task 敘述、無 always @(*) 敘述。  
-
-**架構圖**：
-![Figure 1](datapath.png) 
 
 ## 結果
 詳細書面報告在 [report.pdf](report.pdf) 中
