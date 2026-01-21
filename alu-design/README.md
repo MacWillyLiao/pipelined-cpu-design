@@ -2,7 +2,7 @@
 Verilog implementation of an Arithmetic Logic Unit (ALU) supporting seven operations: AND, OR, ADD, SUB, SLT, SLL, and MULTU.
 
 ## Datapath 架構圖
-<img src="datapath.png" alt="示意圖" width="700">
+<img src="datapath.png" alt="示意圖" width="800">
 
 ## 架構圖中的元件說明與設計
 - **ALU**：包含 32-bits AND, OR, ADD, SUB, SLT 等功能，使用 Gate-Level Modeling 與 Data Flow Modeling (Continuous Assignments)，從 Full Adder 做起，以 Ripple-Carry 的進位方式，連接 32 個 1-bit ALU Bit Slice，成為 32-bits ALU。其中不直接使用 '+' operator，亦不使用 Always Block 或 Procedure Assignment 來設計。本模組為組合邏輯 (Combinational Logic)。
