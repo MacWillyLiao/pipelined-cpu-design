@@ -22,6 +22,7 @@ e) Other Instructions: `mfhi`, `mflo`, `nop`
 
 ## Verilog 程式碼
 - 程式在 [`src/`](src/) 資料夾中，部分所需程式 (ALU) 在 alu-design 資料夾中的 [`src/`](alu-design/src/) 資料夾中。
+- 
 - [`data/`](data/) 資料夾內為相關測試資料。
 
 ## 結果
